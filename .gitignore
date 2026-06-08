@@ -1,0 +1,56 @@
+# ── Secrets — NEVER commit these ─────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.python-version
+
+# ── Pytest ────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+*.xml
+
+# ── Azure / Foundry ───────────────────────────────────────────────────────
+.azure/
+azureml-logs/
+outputs/
+logs/
+
+# ── Qiskit / ML ───────────────────────────────────────────────────────────
+*.qasm
+*.qobj
+
+# ── Reports (may contain real repo data) ─────────────────────────────────
+report*.json
+*_circuit.svg
+scan_results/
+
+# ── OS ────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo

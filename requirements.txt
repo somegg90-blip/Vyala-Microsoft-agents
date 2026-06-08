@@ -1,0 +1,42 @@
+# Core Azure Foundry Agent SDK
+azure-ai-projects>=2.1.0
+azure-identity
+azure-search-documents
+
+# Local Vector DB (Foundry IQ Proxy)
+llama-index
+llama-index-readers-file
+llama-index-vector-stores-qdrant
+qdrant-client
+pypdf               # CRITICAL: Required for LlamaIndex to read your PDFs
+
+# Frontend & Utilities
+streamlit
+python-dotenv
+requests            # For fetch_cves.py
+
+# QuantumShield Learning Platform — Requirements
+# Install: pip install -r requirements.txt
+# Python: 3.10+
+
+# ── Core Azure / Foundry ──────────────────────────────────────────────────
+azure-ai-projects>=2.1.0
+azure-identity>=1.19.0
+azure-search-documents>=11.6.0
+
+# ── Quantum circuit simulation ────────────────────────────────────────────
+qiskit>=2.0.0
+qiskit-aer>=0.15.0
+
+# ── AST parsing (optional — falls back to regex if absent) ────────────────
+tree-sitter>=0.23.0
+
+# ── API server ────────────────────────────────────────────────────────────
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ── Dev / testing only ────────────────────────────────────────────────────
+pytest>=9.0.0

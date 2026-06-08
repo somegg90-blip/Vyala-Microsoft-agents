@@ -1,0 +1,13 @@
+{
+  "TEAM-A": {
+    "name": "Payments Platform Team",
+    "compliance_deadline": "2030-01-01",
+    "compliance_framework": "NSA CNSA 2.0",
+    "members": [
+      {"id": "EMP-001", "role": "Backend Engineer",  "repos": ["payments-service"]},
+      {"id": "EMP-002", "role": "DevOps Engineer",   "repos": ["payments-service", "infra"]},
+      {"id": "EMP-003", "role": "Security Engineer", "repos": ["payments-service", "auth-service"]},
+      {"id": "EMP-004", "role": "Cloud Engineer",    "repos": ["infra", "key-management"]}
+    ]
+  }
+}
