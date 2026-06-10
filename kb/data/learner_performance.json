@@ -1,0 +1,42 @@
+[
+  {
+    "learner_id": "EMP-001",
+    "role": "Backend Engineer",
+    "certification": "NIST PQC Migration Specialist — Application Layer",
+    "practice_score_avg": 52,
+    "hours_studied": 6,
+    "exam_outcome": "In Progress",
+    "top_weakness": "ML-DSA key generation",
+    "last_assessment": "2026-06-01"
+  },
+  {
+    "learner_id": "EMP-002",
+    "role": "DevOps Engineer",
+    "certification": "NIST PQC Migration Specialist — Infrastructure Layer",
+    "practice_score_avg": 68,
+    "hours_studied": 14,
+    "exam_outcome": "In Progress",
+    "top_weakness": "Hybrid TLS configuration",
+    "last_assessment": "2026-06-02"
+  },
+  {
+    "learner_id": "EMP-003",
+    "role": "Security Engineer",
+    "certification": "NIST PQC Migration Specialist — Full Stack",
+    "practice_score_avg": 81,
+    "hours_studied": 28,
+    "exam_outcome": "Pass",
+    "top_weakness": "None",
+    "last_assessment": "2026-06-03"
+  },
+  {
+    "learner_id": "EMP-004",
+    "role": "Cloud Engineer",
+    "certification": "NIST PQC Migration Specialist — Cloud Services",
+    "practice_score_avg": 44,
+    "hours_studied": 4,
+    "exam_outcome": "In Progress",
+    "top_weakness": "Key Management Service migration",
+    "last_assessment": "2026-06-01"
+  }
+]

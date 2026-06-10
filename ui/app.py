@@ -165,11 +165,23 @@ elif view == "👨‍💼 Manager View":
     st.markdown("### 📊 Team PQC Readiness Dashboard")
     st.caption("Aggregated by Manager Insights Agent using Fabric IQ & Work IQ")
     
+    # --- Dynamic Metrics Calculation ---
+    if learner_perf:
+        total_engineers = len(learner_perf)
+        certified_count = sum(1 for e in learner_perf if e.get("exam_outcome") == "Pass")
+        avg_score = sum(e.get("practice_score_avg", 0) for e in learner_perf) / total_engineers
+        readiness_pct = int(avg_score) # Use average score as readiness proxy
+        critical_gaps = sum(1 for e in learner_perf if e.get("top_weakness", "None") != "None")
+        deadline_risk = "HIGH" if critical_gaps > 2 or readiness_pct < 70 else "MEDIUM"
+        delta = "-5%" if readiness_pct < 70 else "+12%"
+    else:
+        readiness_pct, certified_count, total_engineers, critical_gaps, deadline_risk, delta = 0, 0, 4, 0, "N/A", "N/A"
+
     col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Team Readiness", "34%", delta="-5%")
-    col2.metric("Engineers Certified", "1 / 4")
-    col3.metric("Critical Skill Gaps", "14")
-    col4.metric("2030 Deadline Risk", "HIGH", delta="Action Needed")
+    col1.metric("Team Readiness", f"{readiness_pct}%", delta=delta)
+    col2.metric("Engineers Certified", f"{certified_count} / {total_engineers}")
+    col3.metric("Critical Skill Gaps", critical_gaps)
+    col4.metric("2030 Deadline Risk", deadline_risk, delta="Action Needed" if deadline_risk == "HIGH" else "")
     
     st.markdown("---")
     st.markdown("### 👥 Engineer Status")
@@ -178,7 +190,8 @@ elif view == "👨‍💼 Manager View":
     if learner_perf:
         for eng in learner_perf:
             status_icon = "✅" if eng.get("exam_outcome") == "Pass" else "⚠️"
-            with st.expander(f"{status_icon} {eng.get('learner_id')} - {eng.get('role')}"):
+            weakness = eng.get("top_weakness", "None")
+            with st.expander(f"{status_icon} {eng.get('learner_id')} - {eng.get('role')} | Weakness: {weakness}"):
                 st.json(eng)
 
     st.markdown("---")

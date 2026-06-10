@@ -1,5 +1,5 @@
 """
-QuantumShield Learning Platform — Evaluation Suite
+VyalaArchon Learning Platform — Evaluation Suite
 ===================================================
 Tests each agent's output quality, grounding, and reliability.
 This directly targets the Reliability & Safety criterion (20%)

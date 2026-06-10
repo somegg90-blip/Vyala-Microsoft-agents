@@ -1,0 +1,34 @@
+{
+  "EMP-001": {
+    "role": "Backend Engineer",
+    "meeting_hours_per_week": 22,
+    "focus_hours_per_week": 10,
+    "preferred_learning_slot": "Morning",
+    "available_study_hours_per_week": 5,
+    "collaboration_pattern": "high-sync"
+  },
+  "EMP-002": {
+    "role": "DevOps Engineer",
+    "meeting_hours_per_week": 15,
+    "focus_hours_per_week": 18,
+    "preferred_learning_slot": "Afternoon",
+    "available_study_hours_per_week": 8,
+    "collaboration_pattern": "balanced"
+  },
+  "EMP-003": {
+    "role": "Security Engineer",
+    "meeting_hours_per_week": 12,
+    "focus_hours_per_week": 22,
+    "preferred_learning_slot": "Morning",
+    "available_study_hours_per_week": 10,
+    "collaboration_pattern": "deep-focus"
+  },
+  "EMP-004": {
+    "role": "Cloud Engineer",
+    "meeting_hours_per_week": 28,
+    "focus_hours_per_week": 8,
+    "preferred_learning_slot": "Evening",
+    "available_study_hours_per_week": 4,
+    "collaboration_pattern": "high-sync"
+  }
+}
