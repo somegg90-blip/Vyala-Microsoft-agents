@@ -54,3 +54,5 @@ desktop.ini
 .idea/
 *.swp
 *.swo
+
+qdrant_storage/
